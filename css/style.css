@@ -181,6 +181,12 @@ input {
   display: none;
 }
 
+/* card animation */
+input:checked + label {
+  width: 600px;
+  height: 400px;
+}
+
 /* batu */
 .batu1 {
   position: absolute;
