@@ -1,6 +1,6 @@
 # 🪄 Tugas Final Project 3 🪄
 
-## Teamwork
+#Teamwork
 - 👤 [Ferdinan Tampubolon]()
 - 👤 [Ilham Fikri]()
 - 👤 [Jenita Berliana]()
@@ -8,5 +8,5 @@
 - 👤 [Shehnaz Nazyma Nabilah]()
 - 👤 [Taufik Hidayatulloh]()
 
-## Deskripsi
+#Deskripsi
 Tugas ini mencakup pembuatan Membuat "Parallax Website"
