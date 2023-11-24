@@ -1,6 +1,6 @@
-# 🪄 Tugas Final Project 3 🪄
+# 🪄 Parallax Website | Final Project 3 🪄
 
-#Teamwork
+## Teamwork
 - 👤 [Ferdinan Tampubolon]()
 - 👤 [Ilham Fikri]()
 - 👤 [Jenita Berliana]()
@@ -8,5 +8,5 @@
 - 👤 [Shehnaz Nazyma Nabilah]()
 - 👤 [Taufik Hidayatulloh]()
 
-#Deskripsi
-Tugas ini mencakup pembuatan Membuat "Parallax Website"
+## Deskripsi
+Tugas ini mencakup pembuatan Membuat "Parallax Website", mencakup tentang portrait of "🌕🌖🌗🌘🌑🌒🌓🌔" menggunakan parallax effect.
