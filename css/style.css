@@ -102,3 +102,120 @@ body {
 .ground {
   margin-top: -400px;
 }
+
+/*  styling moon portrait */
+.moon-portrait {
+  /* background: yellow; */
+  margin-top: 250px;
+}
+
+.portrait-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.portrait-container .text-content h1 {
+  background: #fff;
+  font-size: 100px;
+  color: #020202;
+  font-style: italic;
+  display: inline;
+  justify-content: center;
+  text-align: center;
+}
+
+.portrait-container .text-content span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+
+/*  card moon portrait */
+.card-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  position: relative;
+}
+
+.card-container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 100px;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card[for="card1"] {
+  background-image: url("../images/Moon-Portrait/card1.svg");
+}
+
+.card[for="card2"] {
+  background-image: url("../images/Moon-Portrait/card2.svg");
+}
+
+.card[for="card3"] {
+  background-image: url("../images/Moon-Portrait/card3.svg");
+}
+
+.card[for="card4"] {
+  background-image: url("../images/Moon-Portrait/card4.svg");
+}
+
+input {
+  display: none;
+}
+
+/* card animation */
+input:checked + label {
+  width: 600px;
+  height: 400px;
+}
+
+/* batu */
+.batu1 {
+  position: absolute;
+  left: 100px;
+  top: 50vh;
+}
+
+.batu1 img {
+  width: 70px;
+  height: 80px;
+}
+
+.batu2 {
+  position: absolute;
+  right: 40px;
+  top: 30vh;
+}
+
+.batu2 img {
+  width: 90px;
+  height: 100px;
+}
+.batu3 {
+  position: absolute;
+  right: 120px;
+  top: 70vh;
+}
+
+.batu3 img {
+  width: 70px;
+  height: 80px;
+}
