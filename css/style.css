@@ -233,11 +233,15 @@ input:checked + label {
   height: 100vh;
   padding: 0 2rem;
   color: white;
+}
+
+.section3-container {
   background-image: url("../images/Section3-Image/sec3_bg.svg");
   background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 .section3-content {
@@ -261,6 +265,17 @@ input:checked + label {
   font-weight: 900;
   line-height: 120.75%;
   margin-top: -200px;
+}
+
+.section3-top {
+  margin-top: 20px;
+  margin-left: -20px;
+  position: absolute;
+  z-index: 2;
+}
+
+.section3-bottom {
+  margin-bottom: -10px;
 }
 
 .section3-moon img {
