@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /* --- Section 1 --- */
 
 .parallax {
@@ -195,7 +194,9 @@ nav ul li:hover {
 
 /* --- Section 2 --- */
 .moon-portrait {
-  margin-top: 250px;
+  margin-top: 280px;
+  background: #000;
+  z-index: 7;
 }
 
 .portrait-container {
@@ -273,6 +274,7 @@ input {
 input:checked + label {
   width: 600px;
   height: 400px;
+  box-shadow: 0px 5px 30px -5px rgba(255, 255, 255, 0.8);
 }
 
 /* batu */
@@ -285,16 +287,19 @@ input:checked + label {
 .batu1 {
   left: 100px;
   top: 50vh;
+  animation: parallaxBatu 3.5s infinite alternate;
 }
 
 .batu2 {
   right: 40px;
   top: 30vh;
+  animation: parallaxBatu 4s infinite alternate;
 }
 
 .batu3 {
   right: 120px;
   top: 70vh;
+  animation: parallaxBatu 3s infinite alternate;
 }
 
 .batu1 img,
@@ -304,6 +309,15 @@ input:checked + label {
   height: 80px;
 }
 
+@keyframes parallaxBatu {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
 
 /* --- Section 3 --- */
 .section3 {
@@ -325,7 +339,6 @@ input:checked + label {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .section3-content {
@@ -365,7 +378,6 @@ input:checked + label {
 .section3-moon img {
   width: 833px;
   height: 900px;
-  overflow: hidden; 
-  z-index: 0; 
+  overflow: hidden;
+  z-index: 0;
 }
-
