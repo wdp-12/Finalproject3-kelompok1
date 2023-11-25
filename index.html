@@ -1,95 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To the Moon</title>
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To the Moon</title>
-  <!-- font poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <header class="bg-langitgelap">
-    <!-- navbar -->
-    <nav class="navbar">
-      <a href="#">
-        <img src="images/logo.svg" alt="logo" />
-      </a>
-
-      <div class="wrapper">
-        <div class="menu">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#explore">Explore</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <a href="#">
-        <img src="images/github.svg" alt="github" />
-      </a>
-    </nav>
-
+  <body>
+    <header class="navbar">
+      <a href="#"><img src="images/logo.svg" alt="" /></a>
+      <a href="#"><img src="images/github.svg" alt="" /></a>
+    </header>
     <!-- hero section -->
-    <div class="container">
-      <div class="header-title">
-        <h1>To The <span>Moon's</span></h1>
-        <h1>Space</h1>
-        <p>
-          Luangkan sedikit waktu untuk mengLorem Ipsum is simply dummy text of
-          the printing and typesetting industry.
-        </p>
 
+    <section class="hero">
+      <img
+        src="images/Home-Images/langit.svg"
+        alt="langit"
+        id="langit"
+        class="parallax"
+      />
+      <img
+        src="images/Home-Images/bulan.png"
+        alt="bulan"
+        id="bulan"
+        class="parallax-bulan"
+        data-speedx="0.3"
+        data-speedy="0.3"
+      />
+      <div class="text">
+        <h1>To The <span>Moon's</span> Space</h1>
         <div class="btn-scroll">
-          <a href="#">Scroll Down</a>
+          <a href="#"> Scroll Down </a>
           <img src="images/Home-Images/scroll.svg" alt="scroll" />
         </div>
       </div>
-      <img class="bulan" src="images/Home-Images/bulan.png" alt="bulan" />
+      <img
+        src="images/Home-Images/tanahgelap.svg"
+        alt="tanah"
+        id="tanah"
+        class="parallax"
+      />
+    </section>
+    <!-- moon portrait -->
+    <div class="moon-portrait">
+      <div class="portrait-container">
+        <div class="text-content">
+          <h1>PORTRAIT OF <span>MOON'S</span></h1>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-container">
+          <input type="radio" name="slide" id="card1" checked />
+          <label for="card1" class="card"></label>
+          <input type="radio" name="slide" id="card2" />
+          <label for="card2" class="card"></label>
+          <input type="radio" name="slide" id="card3" />
+          <label for="card3" class="card"></label>
+          <input type="radio" name="slide" id="card4" />
+          <label for="card4" class="card"></label>
+        </div>
+        <div class="batu1">
+          <img src="images/Moon-Portrait/batu.svg" alt="" />
+        </div>
+        <div class="batu2">
+          <img src="images/Moon-Portrait/batu.svg" alt="" />
+        </div>
+        <div class="batu3">
+          <img src="images/Moon-Portrait/batu.svg" alt="" />
+        </div>
+      </div>
     </div>
-    <img class="ground" src="images/Home-Images/tanahgelap.png" alt="ground" />
-  </header>
 
-  <!-- moon portrait -->
-  <div class="moon-portrait">
-    <div class="portrait-container">
-      <div class="text-content">
-        <h1>PORTRAIT OF <span>MOON'S</span></h1>
-      </div>
-    </div>
-
-    <div class="card-wrapper">
-      <div class="card-container">
-        <input type="radio" name="slide" id="card1" checked>
-        <label for="card1" class="card"></label>
-        <input type="radio" name="slide" id="card2">
-        <label for="card2" class="card"></label>
-        <input type="radio" name="slide" id="card3">
-        <label for="card3" class="card"></label>
-        <input type="radio" name="slide" id="card4">
-        <label for="card4" class="card"></label>
-      </div>
-      <div class="batu1">
-        <img src="images/Moon-Portrait/batu.svg" alt="">
-      </div>
-      <div class="batu2">
-        <img src="images/Moon-Portrait/batu.svg" alt="">
-      </div>
-      <div class="batu3">
-        <img src="images/Moon-Portrait/batu.svg" alt="">
-      </div>
-    </div>
-  </div>
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
