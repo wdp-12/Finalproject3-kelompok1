@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /* --- Section 1 --- */
 
 .parallax {
@@ -196,6 +195,8 @@ nav ul li:hover {
 /* --- Section 2 --- */
 .moon-portrait {
   margin-top: 250px;
+  background: #000;
+  z-index: 7;
 }
 
 .portrait-container {
@@ -304,7 +305,6 @@ input:checked + label {
   height: 80px;
 }
 
-
 /* --- Section 3 --- */
 .section3 {
   display: inline;
@@ -325,7 +325,6 @@ input:checked + label {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .section3-content {
@@ -365,7 +364,6 @@ input:checked + label {
 .section3-moon img {
   width: 833px;
   height: 900px;
-  overflow: hidden; 
-  z-index: 0; 
+  overflow: hidden;
+  z-index: 0;
 }
-
