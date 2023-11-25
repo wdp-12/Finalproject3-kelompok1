@@ -20,11 +20,12 @@ window.addEventListener("scroll", () => {
   let langit = document.querySelector("#langit");
   let bulan = document.querySelector("#bulan");
   let tanah = document.querySelector("#tanah");
-
+  let text = document.querySelector(".text");
   let value = window.scrollY;
   langit.style.transform = `scale(${value * 0.0005 + 1})`;
   tanah.style.transform = `scale(${
     value * 0.0005 + 1
   }) translateY(60%) translateX(calc(2% * ${value}px))`;
   bulan.style.left = value * -0.3 + "px";
+  text.style.top = value * 0.5 + 150 + "px";
 });
