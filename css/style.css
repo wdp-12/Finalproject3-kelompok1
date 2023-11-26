@@ -309,6 +309,7 @@ input:checked+label {
 
 .section3-content {
   margin-top: -200px;
+  z-index: 1;
 }
 
 .section3-content h1 {
@@ -331,19 +332,23 @@ input:checked+label {
 }
 
 .section3-top {
-  margin-top: 20px;
-  margin-left: -20px;
-  position: absolute;
+  object-fit: cover;
+  position: relative;
   z-index: 2;
 }
 
-.section3-bottom {
-  margin-bottom: -10px;
+.section3-moon {
+  overflow: hidden; 
+  margin-top: -820px;
+  z-index: 0; 
 }
 
 .section3-moon img {
   width: 833px;
   height: 900px;
-  overflow: hidden; 
-  z-index: 0; 
 }
+
+.section3-bottom {
+  margin-bottom: -20px;
+}
+
