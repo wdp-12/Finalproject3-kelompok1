@@ -196,9 +196,8 @@ nav ul li:hover {
 .moon-portrait {
   margin-top: 280px;
   background: #000;
-  z-index: 7;
-  position: sticky;
-  top: 50px;
+  z-index: 17;
+padding-top: 100px ;
 }
 
 .portrait-container {
@@ -333,7 +332,7 @@ input:checked + label {
   height: 100vh;
   padding: 0 2rem;
   color: white;
-  z-index: 8;
+  z-index: -5;
 }
 
 .section3-container {
@@ -367,15 +366,23 @@ input:checked + label {
   margin-top: -200px;
 }
 
+
 .section3-top {
-  margin-top: 20px;
-  margin-left: -20px;
+top: -50px;
+left: -100px;
+right: 0;
   position: absolute;
+  min-width: 2000px;
+  height: 1000px;
   z-index: 2;
+  object-fit: cover;
 }
 
 .section3-bottom {
-  margin-bottom: -10px;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  
 }
 
 .section3-moon img {
