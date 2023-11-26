@@ -56,9 +56,10 @@ window.onload = calcScrollvalue;
 
 
 
-let moon = document.getElementById("moon");
+//section 3
+const moon = document.querySelector(".parallax-moon");
 
-window.addEventListener("scroll",()=>{
-  let value = window.scrollY;
-  moon.style.left = value * 1.5 + "px";
-})
+  window.addEventListener("scroll", () => {
+    let value = window.scrollY;
+    moon.style.transform = `translateY(${value * -0.1}px)`
+  });
