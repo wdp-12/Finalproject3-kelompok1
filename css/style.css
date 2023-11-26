@@ -6,19 +6,30 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-
+::selection {
+  background-color: rgb(85, 85, 85);
+}
 body {
   background: #000000;
   color: #fff;
   overflow-x: hidden;
 }
 
+/* --- Section 1 --- */
+
+.parallax {
+  pointer-events: none;
+}
+
 .navbar {
+  position: absolute;
+  top: 50px;
   width: 100%;
   display: flex;
-  padding: 2rem;
+  padding: 0 5rem;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
 }
 
 nav {
@@ -53,10 +64,57 @@ nav ul li:hover {
   font-weight: bold;
   padding-bottom: 2px;
   text-decoration: none;
-  background-image: linear-gradient(128deg, #FF8A00 15%, #CCFF00 85%);
+  background-image: linear-gradient(128deg, #ff8a00 15%, #ccff00 85%);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 3px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#tanah {
+  transform: translateY(60%);
+  top: 100px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 4;
+}
+
+.text {
+  position: absolute;
+  padding: 0 5rem;
+  top: 150px;
+}
+.text h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 100px;
+  width: 800px;
+}
+.hero #langit {
+  top: -100px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translate(0, 0);
+}
+
+.hero #bulan {
+  top: -200px;
+  transform: scale(0.7) translateX(40%);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
 }
 
 .container {
@@ -65,46 +123,16 @@ nav ul li:hover {
   padding: 0 2rem;
 }
 
-.bg-langitgelap {
-  background-image: url("../images/Home-Images/langit.png");
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+.planets-container {
   position: relative;
+  height: 100vh;
+  padding: 100px 200px;
 }
 
-.bg-langitgelap::before {
-  content: "";
-  background: url("../images/Home-Images/langit.png") center/cover no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  animation: parallaxBg 10s infinite linear;
+.header-content {
+  padding: 0 5rem;
 }
-
-@keyframes parallaxBg {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-.header-title h1 {
-  font-size: 100px;
-  font-weight: 900;
-  line-height: 130px;
-}
-
-.header-title h1 span {
+.text h1 span {
   background: linear-gradient(128deg, #ff2e00 27.08%, #ffe24a 67.57%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -146,33 +174,31 @@ nav ul li:hover {
   font-weight: 600;
   text-decoration: none;
 }
-
-.bulan {
-  width: 833px;
-  flex-shrink: 0;
-  margin-right: -300px;
-  margin-top: -100px;
-  transform: translateZ(0);
-  animation: parallaxMoon 10s infinite linear;
+.btn-scroll img {
+  width: 10px;
 }
 
-@keyframes parallaxMoon {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-30%);
-  }
+.bulan {
+  position: absolute;
+  width: 833px;
+  /* z-index: -1; */
+  flex-shrink: 0;
+  right: -100px;
+  top: 100px;
 }
 
 .ground {
-  margin-top: -400px;
+  margin-top: 100px;
+  z-index: 20;
 }
 
-/*  styling moon portrait */
+/* --- Section 2 --- */
 .moon-portrait {
-  margin-top: 250px;
+  margin-top: 280px;
+  background: #000;
+  z-index: 7;
+  position: sticky;
+  top: 50px;
 }
 
 .portrait-container {
@@ -222,7 +248,7 @@ nav ul li:hover {
   margin: 0 10px;
   display: flex;
   align-items: flex-end;
-  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
@@ -247,9 +273,10 @@ input {
 }
 
 /* card animation */
-input:checked+label {
+input:checked + label {
   width: 600px;
   height: 400px;
+  box-shadow: 0px 5px 30px -5px rgba(255, 255, 255, 0.8);
 }
 
 /* batu */
@@ -262,16 +289,19 @@ input:checked+label {
 .batu1 {
   left: 100px;
   top: 50vh;
+  animation: parallaxBatu 3.5s infinite alternate;
 }
 
 .batu2 {
   right: 40px;
   top: 30vh;
+  animation: parallaxBatu 4s infinite alternate;
 }
 
 .batu3 {
   right: 120px;
   top: 70vh;
+  animation: parallaxBatu 3s infinite alternate;
 }
 
 .batu1 img,
@@ -279,4 +309,104 @@ input:checked+label {
 .batu3 img {
   width: 70px;
   height: 80px;
+}
+
+@keyframes parallaxBatu {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* --- Section 3 --- */
+.section3 {
+  display: inline;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+  color: white;
+  z-index: 8;
+}
+
+.section3-container {
+  background-image: url("../images/Section3-Image/sec3_bg.svg");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section3-content {
+  margin-top: -200px;
+}
+
+.section3-content h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 130px;
+}
+
+.section3-content h1 span {
+  background: linear-gradient(128deg, #ff2e00 27.08%, #ffe24a 67.57%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120.75%;
+  margin-top: -200px;
+}
+
+.section3-top {
+  margin-top: 20px;
+  margin-left: -20px;
+  position: absolute;
+  z-index: 2;
+}
+
+.section3-bottom {
+  margin-bottom: -10px;
+}
+
+.section3-moon img {
+  width: 833px;
+  height: 900px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#progres {
+  position: fixed;
+  /* background-color: #194db9; */
+  z-index: 1000;
+  bottom: 60px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  color: #1d002c; 
+  cursor: pointer;
+}
+
+#progres-value {
+  display: block;
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
 }
